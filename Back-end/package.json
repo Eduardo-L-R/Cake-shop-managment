@@ -1,0 +1,37 @@
+{
+  "name": "cake-factory-managment",
+  "version": "0.0.1",
+  "description": "Server aplication with end-points for the managment of a cake factory.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js",
+    "start-prodution": "npm start index.js",
+    "install": "yarn install",
+    "install-production": "yarn install --production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eduardo-L-R/Cake-shop-managment.git"
+  },
+  "keywords": [
+    "cake",
+    "managment",
+    "factory",
+    "endpoints"
+  ],
+  "author": "https://github.com/Eduardo-L-R",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Eduardo-L-R/Cake-shop-managment/issues"
+  },
+  "homepage": "https://github.com/Eduardo-L-R/Cake-shop-managment#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.13",
+    "nodemon": "^2.0.6"
+  }
+}
