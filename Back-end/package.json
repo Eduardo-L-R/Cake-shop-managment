@@ -4,11 +4,9 @@
   "description": "Server aplication with end-points for the managment of a cake factory.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js",
-    "start-prodution": "npm start index.js",
-    "install": "yarn install",
-    "install-production": "yarn install --production"
+    "start": "node index.js",
+    "start-develop": "nodemon index.js",
+    "install": "yarn install"
   },
   "repository": {
     "type": "git",
@@ -18,8 +16,7 @@
     "cake",
     "managment",
     "factory",
-    "endpoints",
-    "prettier"
+    "endpoints"
   ],
   "author": "https://github.com/Eduardo-L-R",
   "license": "ISC",
