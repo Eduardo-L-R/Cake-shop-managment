@@ -1,4 +1,4 @@
-yarn.lock
 /node_modules
 .development.env
 log.txt
+yarn.lock
