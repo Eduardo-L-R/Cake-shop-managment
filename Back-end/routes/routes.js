@@ -1,11 +1,16 @@
 const express = require("express");
+const router = express.Router();
 
-var router = express.Router();
+const { getCakes, postCake, patchCake, deleteCake, getSpecificCake } = require('../controllers/links.js');
 
-router.get("/hola", (req, res) => {
-    console.log('hola');
-    res.send('hola');
-});
+router.get('/get', getCakes);
 
+router.get('/get/:name', getSpecificCake);
+
+router.post('/add', postCake);
+
+router.patch('/modify/:name', patchCake);
+
+router.delete('/delete/:name', deleteCake);
 
 module.exports = router;

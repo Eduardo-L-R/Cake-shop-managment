@@ -18,7 +18,8 @@
     "cake",
     "managment",
     "factory",
-    "endpoints"
+    "endpoints",
+    "prettier"
   ],
   "author": "https://github.com/Eduardo-L-R",
   "license": "ISC",
