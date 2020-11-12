@@ -8,6 +8,12 @@ this aplication work with:
 - Nodejs
 - Reactjs
 
+## [back-end application](https://github.com/Eduardo-L-R/Cake-shop-managment/tree/main/Back-end)
+
+### links for try the back-end application use [https://cake-factory-test.herokuapp.com](https://cake-factory-test.herokuapp.com) with postman.
+
+### Postman collection: https://www.getpostman.com/collections/a97fcef444ec68a7fd53
+
 ### Endpoints
 
 - method:get url:/cakes
@@ -16,6 +22,4 @@ this aplication work with:
 - method:patch url:/cakes/:id
 - method:delete url:/cakes/:id
 
-### links for try the back-end application use [https://cake-factory-test.herokuapp.com](https://cake-factory-test.herokuapp.com) with postman.
 
-### Postman collection: https://www.getpostman.com/collections/a97fcef444ec68a7fd53
