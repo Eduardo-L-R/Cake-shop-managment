@@ -10,10 +10,12 @@ this aplication work with:
 
 ## Endponints
 
-- /api/v1/cakes/get
-- /api/v1/cakes/get/:name
-- /api/v1/cakes/add
-- /api/v1/cakes/modify/:name
-- /api/v1/cakes/delete/:name
+- method:get url:/cakes
+- method:get url:/cakes/:id
+- mehotd:post url:/cakes
+- method:patch url:/cakes/:id
+- method:delete url:/cakes/:id
 
-## links for probe the application... 
+## links for probe the back-end application use [https://cake-factory-test.herokuapp.com](https://cake-factory-test.herokuapp.com) with postman.
+
+## Postman collection: https://www.getpostman.com/collections/a97fcef444ec68a7fd53
