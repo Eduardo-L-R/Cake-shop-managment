@@ -7,125 +7,280 @@
 	},
 	"item": [
 		{
-			"name": "http://localhost:3000/api/v1/cakes/get/test cake",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:3000/API/obtain/test cake",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"API",
-						"obtain",
-						"test cake"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "http://localhost:3000/api/v1/cakes/get",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:3000/API/obtain",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"API",
-						"obtain"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "http://localhost:3000/api/v1/cakes/add",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"test cake\",\r\n    \"price\": 24,\r\n    \"flavor\": \"chocolate\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+			"name": "localhost server",
+			"item": [
+				{
+					"name": "add cake",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"cakeName\",\r\n    \"price\": 24,\r\n    \"flavor\": \"chocolate\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://cake-factory-test.herokuapp.com/cakes",
+							"protocol": "https",
+							"host": [
+								"cake-factory-test",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cakes"
+							]
 						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtain all cakes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://cake-factory-test.herokuapp.com/cakes",
+							"protocol": "https",
+							"host": [
+								"cake-factory-test",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cakes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find info of some cake",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://cake-factory-test.herokuapp.com/cakes/5faccbd46d4ca30004154dd5",
+							"protocol": "https",
+							"host": [
+								"cake-factory-test",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cakes",
+								"5faccbd46d4ca30004154dd5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "modify cake",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"cakeName17\",\r\n    \"price\": 17,\r\n    \"flavor\": \"sweet\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://cake-factory-test.herokuapp.com/cakes/5faccbd46d4ca30004154dd5",
+							"protocol": "https",
+							"host": [
+								"cake-factory-test",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cakes",
+								"5faccbd46d4ca30004154dd5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete cake",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://cake-factory-test.herokuapp.com/cakes/5faccbd46d4ca30004154dd5",
+							"protocol": "https",
+							"host": [
+								"cake-factory-test",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cakes",
+								"5faccbd46d4ca30004154dd5"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "deploy server in heroku",
+			"item": [
+				{
+					"name": "add cake",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"cakeName\",\r\n    \"price\": 24,\r\n    \"flavor\": \"chocolate\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://cake-factory-test.herokuapp.com/cakes",
+							"protocol": "https",
+							"host": [
+								"cake-factory-test",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cakes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtain all cakes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://cake-factory-test.herokuapp.com/cakes",
+							"protocol": "https",
+							"host": [
+								"cake-factory-test",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cakes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find info of some cake",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://cake-factory-test.herokuapp.com/cakes/",
+							"protocol": "https",
+							"host": [
+								"cake-factory-test",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cakes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "modify cake",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"cakeName2\",\r\n    \"price\": 48,\r\n    \"flavor\": \"mint\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://cake-factory-test.herokuapp.com/cakes/",
+							"protocol": "https",
+							"host": [
+								"cake-factory-test",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cakes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete cake",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://cake-factory-test.herokuapp.com/cakes/5facccdefc58930004c9a740",
+							"protocol": "https",
+							"host": [
+								"cake-factory-test",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cakes",
+								"5facccdefc58930004c9a740"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "0f0f9494-5396-4cf4-8c53-81339d33859f",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
 					}
 				},
-				"url": {
-					"raw": "http://localhost:3000/API/add",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"API",
-						"add"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "http://localhost:3000/api/v1/cakes/modify/pastel de prueba 2",
-			"request": {
-				"method": "PATCH",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"test cake\",\r\n    \"price\": 48,\r\n    \"flavor\": \"mint\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
+				{
+					"listen": "test",
+					"script": {
+						"id": "daa091ae-cbbe-4ce8-b21b-564aee005299",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
 					}
-				},
-				"url": {
-					"raw": "http://localhost:3000/API/modify/pastel de prueba 2",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"API",
-						"modify",
-						"pastel de prueba 2"
-					]
 				}
-			},
-			"response": []
-		},
-		{
-			"name": "http://localhost:3000/api/v1/cakes/delete/test cake",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:3000/API/delete/test cake",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"API",
-						"delete",
-						"test cake"
-					]
-				}
-			},
-			"response": []
+			],
+			"protocolProfileBehavior": {}
 		}
 	],
 	"protocolProfileBehavior": {}

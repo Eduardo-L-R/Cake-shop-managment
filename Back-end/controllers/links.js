@@ -5,8 +5,7 @@ const getCakes = (req, res) => {
   cakesModel.find().sort({ name: 1 })
     .then(cakeDoc => {
       let arrayCake = []
-      cakeDoc.map((cake) => { arrayCake.push(cake.name) });
-      console.log(arrayCake);
+      cakeDoc.map((cake) => { arrayCake.push({ "id": cake._id, "name": cake.name }) });
       res.json(arrayCake);
     })
     .catch(error => {
@@ -15,16 +14,16 @@ const getCakes = (req, res) => {
 };
 
 const getSpecificCake = (req, res) => {
-  let cakeName = req.params.name;
-  cakesModel.find({ name: cakeName }, (err, arr) => {
+  let cakeId = req.params.id;
+  cakesModel.find({ _id: cakeId }, (err, arr) => {
     if (arr.length !== 0) {
       res.json(arr[0]);
     } else {
-      res.send('The name entered not exist');
+      res.send('The id entered not exist');
     }
   })
     .catch(error => {
-      console.log('The item not exist', error);
+      console.log(error);
     });
 };
 
@@ -35,9 +34,9 @@ const postCake = (req, res) => {
     if (arr.length === 0) {
       newCake.save()
         .then(() => {
-          console.log("Is aggregated the cake correctrly")
+          console.log("Is aggregated the cake correctly")
           res.json({
-            message: "Is aggregated the cake correctrly",
+            message: "Is aggregated the cake correctly",
             cake: newCake
           });
         })
@@ -56,29 +55,31 @@ const postCake = (req, res) => {
 
 const patchCake = (req, res) => {
   let cakeInfo = req.body
-  let cakeName = req.params.name;
-  cakesModel.findOneAndUpdate({ "name": cakeName }, { ...req.body })
-    .then(cake => {
+  let cakeId = req.params.id;
+  cakesModel.findOneAndUpdate({ _id: cakeId }, { ...req.body }, (err, arr) => {
+    if (arr) {
       res.json({
         message: "Is actualiced the cake correctly",
         newcake: cakeInfo,
-        beforeCake: cake
-
+        beforeCake: arr
       })
-    })
-    .catch(error => console.log(error));
+    } else {
+      res.send('<p>id not found</p>')
+    }
+  })
+    .catch(error => console.log('error'));
 }
 
 const deleteCake = (req, res) => {
-  let name = req.params.name;
-  cakesModel.findOneAndRemove({ "name": name }, (err, obj) => {
+  let cakeId = req.params.id;
+  cakesModel.findOneAndRemove({ _id: cakeId }, (err, obj) => {
     if (obj) {
       res.json({
         message: "The cake was eliminated correctly",
         cake: obj
       });
     } else {
-      res.send('The name of the cake was send not exist');
+      res.send('The id of the cake was send not exist');
     }
   })
     .catch(error => console.log(error));

@@ -3,10 +3,13 @@
   "version": "0.0.1",
   "description": "Server aplication with end-points for the managment of a cake factory.",
   "main": "index.js",
+  "engine": {
+    "node": "10.16.3",
+    "npm": "6.9.0"
+  },
   "scripts": {
-    "start": "node index.js",
-    "start-develop": "nodemon index.js",
-    "install": "yarn install"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -16,7 +19,8 @@
     "cake",
     "managment",
     "factory",
-    "endpoints"
+    "endpoints",
+    "prettier"
   ],
   "author": "https://github.com/Eduardo-L-R",
   "license": "ISC",
@@ -29,7 +33,6 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "mongoose": "^5.10.13",
-    "nodemon": "^2.0.6"
+    "mongoose": "^5.10.13"
   }
 }
