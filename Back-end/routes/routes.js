@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
   res.send(
     "<h2>endpoints avaibles:</h2>" +
     "<ul>" +
-    "<li>method:get in / , endpoints acaibles.</li>" +
+    "<li>method:get in / , endpoints avaibles.</li>" +
     "<li>method:post in /cakes , add a cake to the database.</li>" +
     "<li>method:get in /cakes, obtain array of cakes.</li>" +
     "<li>method:get in /cakes/:id , obtain information specific of the cake</li>" +
